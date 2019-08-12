@@ -30,7 +30,7 @@ class kobuki_battery():
 		rospy.init_node("kobuki_battery")		
 
 		#monitor Kobuki's power and charging status.  If an event occurs (low battery, charging, not charging etc) call function SensorPowerEventCallback
-	        rospy.Subscriber("/mobile_base/sensors/core",SensorState,self.SensorPowerEventCallback)
+        rospy.Subscriber("/mobile_base/sensors/core",SensorState,self.SensorPowerEventCallback)
 
 		#rospy.spin() tells the program to not exit until you press ctrl + c.  If this wasn't there... it'd subscribe and then immediatly exit (therefore stop "listening" to the thread).
 		rospy.spin();
